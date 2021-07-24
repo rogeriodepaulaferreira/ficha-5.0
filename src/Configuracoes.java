@@ -1,14 +1,15 @@
-public class Configuracoes {
+public abstract class Configuracoes {
 
 
-    private double valorBaseAtributoModificador = 10;
-    private double valorBaseCalculoModificador = 2;
+    private int valorBaseAtributoModificador = 10;
+    private int valorBaseCalculoModificador = 2;
+    private int valorBaseProeficiencia = 2;
 
     public double getValorBaseAtributoModificador() {
         return valorBaseAtributoModificador;
     }
 
-    public void setValorBaseAtributoModificador(double valorBaseAtributoModificador) {
+    public void setValorBaseAtributoModificador(int valorBaseAtributoModificador) {
         this.valorBaseAtributoModificador = valorBaseAtributoModificador;
     }
 
@@ -16,8 +17,16 @@ public class Configuracoes {
         return valorBaseCalculoModificador;
     }
 
-    public void setValorBaseCalculoModificador(double valorBaseCalculoModificador) {
+    public void setValorBaseCalculoModificador(int valorBaseCalculoModificador) {
         this.valorBaseCalculoModificador = valorBaseCalculoModificador;
+    }
+
+    public int getValorBaseProeficiencia() {
+        return valorBaseProeficiencia;
+    }
+
+    public void setValorBaseProeficiencia(int valorBaseProeficiencia) {
+        this.valorBaseProeficiencia = valorBaseProeficiencia;
     }
 
 }

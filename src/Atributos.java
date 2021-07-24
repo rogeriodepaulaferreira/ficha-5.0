@@ -1,12 +1,10 @@
-public class Atributos {
+public class Atributos extends Configuracoes {
 
     private String nome;
     private Long descricao;
     private int valorDoAtributo;
-    private Configuracoes config;
 
     public Atributos(){
-        config = new Configuracoes();
     }
 
     public String getNome() {
@@ -33,12 +31,12 @@ public class Atributos {
         this.valorDoAtributo = Math.max(valorDoAtributo, 0);
     }
 
-    public double getModificador(){
+    public int getModificador(){
 
         double modificador = (
-                this.valorDoAtributo - config.getValorBaseAtributoModificador()
-        ) / config.getValorBaseCalculoModificador();
+                this.valorDoAtributo - super.getValorBaseAtributoModificador()
+        ) / super.getValorBaseCalculoModificador();
 
-        return Math.floor(modificador);
+        return (int) Math.floor(modificador);
     }
 }
